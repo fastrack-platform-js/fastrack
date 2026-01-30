@@ -1,0 +1,37 @@
+{
+  "name": "@fastrack/starter-redis",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "lint": "echo ok",
+    "test": "echo ok"
+  },
+  "dependencies": {
+    "@fastrack/core": "workspace:*",
+    "@fastrack/starter-actuator": "workspace:*",
+    "@sinclair/typebox": "^0.34.34",
+    "fastify": "^5.1.0",
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

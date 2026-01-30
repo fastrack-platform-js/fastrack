@@ -1,0 +1,23 @@
+{
+  "name": "hello-fastrack-service",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "node --watch dist/main.js"
+  },
+  "dependencies": {
+    "@fastrack/core": "workspace:*",
+    "@fastrack/starter-web": "workspace:*",
+    "@fastrack/starter-actuator": "workspace:*",
+    "@fastrack/starter-openapi": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
